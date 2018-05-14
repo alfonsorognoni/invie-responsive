@@ -328,6 +328,7 @@ input:focus, textarea:focus {
   left: 20px;
   top: 20px;
   z-index: 3;
+  color: white;
 }
 
 /* tablet */
@@ -379,6 +380,16 @@ input:focus, textarea:focus {
     padding: 0px;
   }
   /**** END GUTARRAS ****/
+
+  /*** PRECIOS ***/
+  .tabla {
+    margin: 50px 10px;
+  }
+  .tabla .contenedor {
+    overflow: auto;
+    border: 1px solid #273b47;
+  }
+  /*** END PRECIOS ***/
 }
 
 @media screen and (max-width: 767px) {
@@ -436,6 +447,10 @@ input:focus, textarea:focus {
 }
 
 @media screen and (max-width: 500px) {
+  .header,
+  .header .contenedor {
+    position: static;
+  }
   .portada .contenedor {
     position: static;
   }

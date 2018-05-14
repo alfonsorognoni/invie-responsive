@@ -111,31 +111,6 @@
       </div>
     </footer>
     <script src="./js/blazy.min.js" charset="utf-8"></script>
-    <script type="text/javascript">
-      var consulta = window.matchMedia('(max-width: 500px)');
-      consulta.addListener(mediaQuery);
-
-      function toggleMenu () {
-        $menu.classList.toggle('active')
-      }
-      var $burguerButton = document.getElementById('burguer-button');
-      var $menu = document.getElementById('menu');
-
-      function mediaQuery() {
-        if (consulta.matches) {
-          $burguerButton.addEventListener('touchstart', toggleMenu)
-        } else {
-          $burguerButton.removeEventListener('touchstart', toggleMenu)
-        }
-      }
-
-      mediaQuery();
-
-      var bLazy = new Blazy({
-        selector: 'img'
-      });
-
-      // $menu.classList.toggle('active')
-    </script>
+    <script src="./js/main.js" charset="utf-8"></script>
   </body>
 </html>
