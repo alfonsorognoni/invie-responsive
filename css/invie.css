@@ -314,6 +314,21 @@ input:focus, textarea:focus {
   margin: 50px 0;
 }
 
+.burguer-button {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  background: #395667;
+  cursor: pointer;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  z-index: 3;
+}
+
 /* tablet */
 @media screen and (max-width: 800px) {
   /**** PORTADA ****/
@@ -420,6 +435,9 @@ input:focus, textarea:focus {
 }
 
 @media screen and (max-width: 500px) {
+  .portada .contenedor {
+    position: static;
+  }
   .portada {
     text-align: center;
   }
@@ -446,5 +464,25 @@ input:focus, textarea:focus {
   }
   .title-b {
     font-size: 30px;
+  }
+  /*** menu offcanvas **/
+  .menu {
+    background: rgba(255, 60, 88, .8);
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    left: -100%;
+    transition: .3s ease-in;
+  }
+  .menu ul {
+    flex: 1;
+  }
+  .menu.active {
+    left: 0px;
   }
 }
