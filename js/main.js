@@ -1,6 +1,3 @@
-var consulta = window.matchMedia('(max-width: 500px)');
-consulta.addListener(mediaQuery);
-
 function toggleMenu () {
   $menu.classList.toggle('active')
 }
@@ -10,6 +7,10 @@ function showMenu () {
 function hideMenu () {
   $menu.classList.remove('active')
 }
+
+var consulta = window.matchMedia('(max-width: 500px)');
+consulta.addListener(mediaQuery);
+
 var $burguerButton = document.getElementById('burguer-button');
 var $menu = document.getElementById('menu');
 
