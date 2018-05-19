@@ -4,6 +4,12 @@ consulta.addListener(mediaQuery);
 function toggleMenu () {
   $menu.classList.toggle('active')
 }
+function showMenu () {
+  $menu.classList.add('active')
+}
+function hideMenu () {
+  $menu.classList.remove('active')
+}
 var $burguerButton = document.getElementById('burguer-button');
 var $menu = document.getElementById('menu');
 
@@ -19,6 +25,17 @@ mediaQuery();
 
 var bLazy = new Blazy({
   selector: 'img'
+});
+
+// GESTOS
+var $body = document.body;
+var gestos = new Hammer($body);
+gestos.on('swiperight', function(ev) {
+  showMenu()
+});
+
+gestos.on('swipeleft', function(ev) {
+  hideMenu()
 });
 
 // $menu.classList.toggle('active')
