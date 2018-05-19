@@ -316,19 +316,31 @@ input:focus, textarea:focus {
 }
 
 .burguer-button {
+  display: none;
   width: 40px;
   height: 40px;
   line-height: 40px;
   border-radius: 50%;
-  display: inline-block;
   text-align: center;
   background: #395667;
   cursor: pointer;
-  position: absolute;
+  position: fixed;
   left: 20px;
   top: 20px;
   z-index: 3;
   color: white;
+}
+
+.video-demo {
+  max-width: 500px;
+  width: 100%;
+  border: 5px solid #3c5b6e;
+}
+
+.video-demo-contenedor {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 110px;
 }
 
 /* tablet */
@@ -390,6 +402,9 @@ input:focus, textarea:focus {
     border: 1px solid #273b47;
   }
   /*** END PRECIOS ***/
+  .video-demo-contenedor {
+    margin-bottom: 30px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -447,6 +462,12 @@ input:focus, textarea:focus {
 }
 
 @media screen and (max-width: 500px) {
+  .precios .header .logotipo {
+    padding: 50px 0px;
+  }
+  .burguer-button {
+    display: block;
+  }
   .header,
   .header .contenedor {
     position: static;
@@ -456,6 +477,9 @@ input:focus, textarea:focus {
   }
   .portada {
     text-align: center;
+  }
+  .portada .button {
+    display: block;
   }
   .menu li {
     display: block;
@@ -484,7 +508,7 @@ input:focus, textarea:focus {
   /*** menu offcanvas **/
   .menu {
     background: rgba(255, 60, 88, .8);
-    position: absolute;
+    position: fixed;
     top: 0px;
     right: 0px;
     bottom: 0px;
@@ -500,6 +524,13 @@ input:focus, textarea:focus {
   }
   .menu.active {
     left: 0px;
+  }
+  .video-demo-contenedor {
+    margin: 0px 10px 30px 10px;
+  }
+  /*** footer **/
+  .formulario .col2 {
+    align-items: stretch;
   }
 }
 
